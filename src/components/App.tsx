@@ -1,7 +1,8 @@
+import Layout from './layout';
 
 function App() {
   return (
-    <h1>RapiDapi Cocktails!</h1>
+    <Layout />
   );
 }
 
