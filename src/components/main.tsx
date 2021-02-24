@@ -1,16 +1,18 @@
-import DrinkItem from './drinkItem';
+import { Route, Switch } from "react-router-dom";
+import SearchResult from "./searchResult";
+import Startpage from "./startpage";
 
 function Main() {
-    return(
+    return (
         <div>
-            <DrinkItem />
-            <DrinkItem />
-            <DrinkItem />
-            <DrinkItem />
-            <DrinkItem />
-            <DrinkItem />
+            <Switch>
+                <Route exact path="/" component={Startpage} />
+                <Route path="/searchResult" component={SearchResult} />
+                // Tillfällig error boundery : )
+                <p>Du har kört fast!!!!</p>
+            </Switch>
         </div>
-    )
+    );
 }
 
 export default Main;
