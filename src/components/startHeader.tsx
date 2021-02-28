@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
+import React from 'react';
+import './header.css';
 
 function StartHeader() {
     return (
         <Link to="/">
-            <h1>RapiDapi</h1>
+            <div className="start-header">
+                <h1 className="logo">RapiDapi</h1>
+            </div>
         </Link>
     );
 }
