@@ -4,11 +4,13 @@ import './header.css';
 
 function StartHeader() {
     return (
-        <Link to="/">
-            <div className="start-header">
-                <h1 className="logo">RapiDapi</h1>
-            </div>
-        </Link>
+        <div className="rapidapi-Header">
+            <Link to="/">
+                <div className="start-header">
+                    <h1 className="logo">RapiDapi</h1>
+                </div>
+            </Link>
+        </div>
     );
 }
 
