@@ -10,9 +10,10 @@
 }
 
 .logo {
-    font-family: cursive;
+    font-family: 'Rochester', cursive;
     color: white;
     font-size: 5rem;
     padding-left: 4rem;
     margin-top: 1rem;
+    font-weight: 500;
 }
