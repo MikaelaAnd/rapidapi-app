@@ -4,9 +4,9 @@ import './startPage.css';
 
 function Startpage() {
     return (
-        <div>
+        <div className="background-image rootStyle">
             <Link to="/searchResult">
-                <p>Här ska ett inputfält in</p>
+                <input placeholder="Search for cocktail/ingredient..." />
             </Link>
         </div>
     );

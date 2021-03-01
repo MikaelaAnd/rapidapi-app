@@ -1,4 +1,20 @@
-p {
-    color: purple;
-    font-size: x-large;
+.background-image {
+    background: url(../assets/background-image-medium.jpg);
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    
+}
+
+.rootStyle {
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 1.5rem;
+    width: 20rem;
+    border-radius: 25px;
+    border: unset;
+    padding: .2rem;
 }

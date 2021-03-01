@@ -1,6 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import SearchResult from "./searchResult";
 import Startpage from "./startpage";
+import './startPage.css';
 
 function Main() {
     return (
