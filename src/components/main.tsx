@@ -8,8 +8,7 @@ function Main() {
             <Switch>
                 <Route exact path="/" component={Startpage} />
                 <Route path="/searchResult" component={SearchResult} />
-                // Tillfällig error boundery : )
-                <p>Du har kört fast!!!!</p>
+
             </Switch>
         </div>
     );
