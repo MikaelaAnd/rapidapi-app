@@ -11,7 +11,6 @@ function ResultHeader() {
                     <input placeholder="Search ingredients..."></input>
                 </div>
             </Link>
-            <p>Här kommer ett inputfält</p>
         </div>
     );
 }
