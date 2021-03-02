@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import DrinkItem from "./drinkItem";
 import SearchResult from "./searchResult";
 import Startpage from "./startpage";
 
@@ -7,9 +8,9 @@ function Main() {
         <div>
             <Switch>
                 <Route exact path="/" component={Startpage} />
-                <Route path="/searchResult" component={SearchResult} />
-     
-                <p>Du har kört fast!!!!</p>
+                <Route path="/searchResult" component={SearchResult} />     
+                <Route path="/drinkItem" component={DrinkItem} />
+
             </Switch>
         </div>
     );
