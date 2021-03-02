@@ -22,10 +22,11 @@
 }
 
 /* Smaller screens */
-@media (max-width: 350px) {
+@media (max-width: 550px) {
     .logo {
         display: flex;
         justify-content: center;
-        font-size: 3rem;
+        font-size: 4rem;
+        padding: 0; 
     }
 }
