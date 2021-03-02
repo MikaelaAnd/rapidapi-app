@@ -57,7 +57,8 @@ class SearchResult extends Component<Props, State> {
                   </Link>
                </div>
             </div>
-    );
+        );
+    }
 }
 
 export default SearchResult;
