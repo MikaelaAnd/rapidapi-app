@@ -1,4 +1,8 @@
 import { ChangeEvent, Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import ResultHeader from './resultHeader';
+import './CSS/searchResultPage.css';
 
 interface Props {
     onChange: (value: string) => void;
@@ -36,21 +40,22 @@ class SearchResult extends Component<Props, State> {
 
     render() {
         return (
-            <div>
+            <div className="background-image-result">
+                <ResultHeader />
                 <input
                     placeholder="Search cocktail by name or ingredient"
                     onChange={this.handleChange}
                 />
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
-                <p>Här kommer en del bilder</p>
+                <div className="contentContainer">
+                <Link to="/drinkItem">
+                    <p>Här kommer en del bilder</p>
+                    <p>Här kommer en del bilder</p>
+                    <p>Här kommer en del bilder</p>
+                    <p>Här kommer en del bilder</p>
+                </Link>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default SearchResult;

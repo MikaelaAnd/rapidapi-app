@@ -1,5 +1,7 @@
+
 import { ChangeEvent, Component } from "react";
 import { Link } from "react-router-dom";
+import './CSS/startPage.css';
 
 interface Props {
     onChange: (value: string) => void;
@@ -37,13 +39,12 @@ class Startpage extends Component<Props, State> {
 
     render() {
         return (
-            <div>
-                <input
-                    placeholder="Search cocktail by name or ingredient"
-                    onChange={this.handleChange}
-                />
+            <div className="background-image rootStyle">
                 <Link to="/searchResult">
-                    <p>Här ska ett inputfält in</p>
+                    <input 
+                      placeholder="Search for cocktail..." 
+                      onChange={this.handleChange}
+                    />
                 </Link>
             </div>
         );

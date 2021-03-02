@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
+import './CSS/resultHeader.css';
+
 
 function ResultHeader() {
     return (
-        <div>
+        <div className="rapiDapiHeader">
             <Link to="/">
-                <h2>RapiDapi</h2>
+                <div className="result-header">
+                    <h2 className="result-logo">RapiDapi</h2>
+                    <input placeholder="Search ingredients..."></input>
+                </div>
             </Link>
-            <p>Här kommer ett inputfält</p>
         </div>
     );
 }

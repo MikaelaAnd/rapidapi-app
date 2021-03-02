@@ -1,12 +1,16 @@
 import { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import DrinkItem from "./drinkItem";
 import SearchResult from "./searchResult";
 import Startpage from "./startpage";
+import './CSS/startPage.css';
+
 
 interface Props { }
 interface State {
     drinks: Cocktails[];
 }
+
 class Main extends Component<Props, State> {
     private readonly COCKTAIL_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.'
     state: State = {

@@ -1,0 +1,42 @@
+
+.contentContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin-top: 40rem;
+}
+
+.drinkPicture {
+    width: 15rem;
+    height: 15rem;
+    background: red;
+    margin: 1rem;
+}
+
+.drinkName {
+    font-size: 3rem;
+}
+
+
+
+@media (max-width: 670px) {
+
+    .contentContainer{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .drinkPicture {
+        margin-top: 3rem;
+    }
+
+    .drinkName {
+        margin: 0; 
+    }
+
+    .drinkDescription {
+        padding: 0 2rem;
+        text-align: justify;
+    }
+
+}
