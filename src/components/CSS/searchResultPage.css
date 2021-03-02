@@ -1,7 +1,11 @@
 .background-image-result {
-    background: url(../assets/background-image-medium.jpg);
+    background: url(../../assets/background-image-medium.jpg);
     height: 100vh;
     display: flex;
     background-position: center;
     opacity: 50%;
+}
+
+.contentContainer {
+    margin-top: 7rem;
 }

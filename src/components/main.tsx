@@ -2,7 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import DrinkItem from "./drinkItem";
 import SearchResult from "./searchResult";
 import Startpage from "./startpage";
-import './startPage.css';
+import './CSS/startPage.css';
 
 function Main() {
     return (

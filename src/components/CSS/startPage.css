@@ -1,5 +1,5 @@
 .background-image {
-    background: url(../assets/background-image-medium.jpg);
+    background: url(../..//assets/background-image-medium.jpg);
     height: 100vh;
     display: flex;
     background-position: center;
@@ -13,8 +13,14 @@
 
 input {
     height: 2rem;
-    width: 30rem;
+    width: 25rem;
     border-radius: 25px;
     border: unset;
     padding: .2rem;
+}
+
+@media (max-width: 550px) {
+    input {
+        width: 14rem; 
+    } 
 }
