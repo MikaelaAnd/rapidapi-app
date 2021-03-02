@@ -8,18 +8,19 @@ interface State {
    drinks: Cocktails[];
 }
 class Layout extends Component<Props, State> {
-   private readonly COCKTAIL_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
+   private readonly COCKTAIL_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.'
    state: State = {
       drinks: []
    }
 
-   handleNewSearchValue = () => {
-      this.getRandomCocktail();
+   // Search by user input
+   handleNewSearchValue = (value: string) => {
+      this.getRandomCocktail(value);
    };
 
-   //Get cocktail API
-   async getRandomCocktail() {
-      fetch(this.COCKTAIL_URL)
+   // Get cocktails from API
+   async getRandomCocktail(searchValue: string) {
+      fetch(this.COCKTAIL_URL + 'php?f=' + searchValue)
          .then(
             (response) => {
                if (response.status !== 200) {
@@ -44,10 +45,11 @@ class Layout extends Component<Props, State> {
    render() {
       return (
          <div>
-            <Header />
+            <Header 
+               onChange={this.handleNewSearchValue}
+            />
             <Main />
             <Footer />
-            <button onClick={this.handleNewSearchValue}>Klick</button>
          </div >
       );
    }
