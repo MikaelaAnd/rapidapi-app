@@ -1,6 +1,6 @@
 import { ChangeEvent, Component } from "react";
 import React from "react";
-import { Link, Route } from "react-router-dom";
+import { Link, Route, RouteComponentProps, withRouter } from "react-router-dom";
 import ResultHeader from './resultHeader';
 import './CSS/searchResultPage.css';
 import DrinkItem from "./drinkItem";
@@ -11,6 +11,10 @@ interface Props {
 }
 interface State {
     value: string;
+}
+
+interface Props extends RouteComponentProps {
+
 }
 
 class SearchResult extends Component<Props, State> {
@@ -43,21 +47,24 @@ class SearchResult extends Component<Props, State> {
         return (
             <div className="background-image-result">
                 <ResultHeader />
+                <div className="contentContainer">
                 <input
                     placeholder="Search cocktail by name or ingredient"
                     onChange={this.handleChange}
                 />
-              <Route path="/drinkItem" component={DrinkItem} />
-                <div className="contentContainer">
-                  <Link to="/drinkItem">
-                    <p>Här kommer en del bilder</p>
-                    <p>Här kommer en del bilder</p>
-                    <p>Här kommer en del bilder</p>
-                    <p>Här kommer en del bilder</p>
-                  </Link>
-               </div>
+                    <Route path="./drinkItem">
+                        <DrinkItem />
+                    </Route>
+                <Link to="/drinkItem">
+                        <p>Här kommer en del bilder</p>
+                        <p>Här kommer en del bilder</p>
+                        <p>Här kommer en del bilder</p>
+                        <p>Här kommer en del bilder</p>
+                </Link>
+                </div>
             </div>
-    );
+        );
+    }
 }
 
-export default SearchResult;
+export default withRouter(SearchResult);
