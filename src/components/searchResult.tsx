@@ -3,7 +3,7 @@ import './searchResultPage.css';
 
 function SearchResult() {
     return (
-    <div className="background-image">
+    <div className="background-image-result">
         <ResultHeader />
 
     </div>
