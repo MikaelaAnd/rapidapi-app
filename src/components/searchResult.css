@@ -1,4 +1,39 @@
+/* Result page div */
+.wrap-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Photo */
+
+.drink-photo {
+    display: flex;
+}
+
+.drink-photo > img {
+    width: 10rem;
+}
+
+/* Drink items */
 .search-element {
     color: purple;
     font-weight: bolder;
+}
+
+.instructions {
+    text-align: center;
+}
+
+.ingredients {
+    text-align: center;
+    font-size: small;
+}
+
+/* Ingredients */
+
+.ingredient-list > span {
+    display: flex;
+    flex-direction: column;
 }
