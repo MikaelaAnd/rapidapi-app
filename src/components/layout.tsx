@@ -7,7 +7,9 @@ function Layout() {
          <Header />
          <Main />
       </div>
+
    );
 }
 
 export default Layout;
+
