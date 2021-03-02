@@ -4,7 +4,6 @@ import { Route, Switch } from 'react-router-dom';
 
 function Header() {
     // (null as any).something;
-
     return (
         <div>
             <Switch>
