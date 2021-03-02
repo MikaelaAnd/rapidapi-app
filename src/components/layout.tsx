@@ -20,7 +20,7 @@ class Layout extends Component<Props, State> {
 
    // Get cocktails from API
    async getRandomCocktail(searchValue: string) {
-      fetch(this.COCKTAIL_URL + 'php?f=' + searchValue)
+      fetch(this.COCKTAIL_URL + 'php?s=' + searchValue)
          .then(
             (response) => {
                if (response.status !== 200) {
@@ -46,6 +46,7 @@ class Layout extends Component<Props, State> {
       return (
          <div>
             <Header 
+               delay={500}
                onChange={this.handleNewSearchValue}
             />
             <Main />
