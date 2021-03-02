@@ -1,10 +1,14 @@
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Layout from './layout';
+import ErrorBoundary from './errorBoundary';
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout />
+      <ErrorBoundary>
+        <Layout />
+      </ErrorBoundary>
     </BrowserRouter>
   );
 }
