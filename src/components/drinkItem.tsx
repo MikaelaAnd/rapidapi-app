@@ -1,9 +1,9 @@
-import { CSSProperties } from "react";
+import React, { CSSProperties } from "react";
 import ResultHeader from "./resultHeader";
 import './CSS/drinkItem.css'
 
 
-function DrinkItem() {
+function DrinkItem(this: any) {
     return (
         <div style={{...background}}>
             <ResultHeader />

@@ -4,6 +4,7 @@ import { Link, Route, RouteComponentProps, withRouter } from "react-router-dom";
 import ResultHeader from './resultHeader';
 import './CSS/searchResultPage.css';
 import DrinkItem from "./drinkItem";
+import ErrorBoundary from "./errorBoundary";
 
 interface Props {
     onChange: (value: string) => void;
@@ -48,19 +49,20 @@ class SearchResult extends Component<Props, State> {
             <div className="background-image-result">
                 <ResultHeader />
                 <div className="contentContainer">
-                <input
-                    placeholder="Search cocktail by name or ingredient"
-                    onChange={this.handleChange}
-                />
-                    <Route path="./drinkItem">
-                        <DrinkItem />
-                    </Route>
-                <Link to="/drinkItem">
+                    <input
+                        placeholder="Search cocktail by name or ingredient"
+                        onChange={this.handleChange}
+                    />
+
+                    <Route path="./drinkItem" component={DrinkItem} />
+                    <ErrorBoundary>
+                    <Link to="/drinkItem">
                         <p>Här kommer en del bilder</p>
                         <p>Här kommer en del bilder</p>
                         <p>Här kommer en del bilder</p>
                         <p>Här kommer en del bilder</p>
-                </Link>
+                    </Link>
+                    </ErrorBoundary>
                 </div>
             </div>
         );

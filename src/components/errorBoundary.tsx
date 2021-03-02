@@ -1,42 +1,48 @@
-import { Component } from "react";
+import { Component, ErrorInfo } from "react";
+import { RouteComponentProps, withRouter } from "react-router-dom";
 
 
-interface Props {}
-
+interface Props extends RouteComponentProps{}
 interface State {
     hasError: boolean; 
 }
 
-export default class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
 
-    state = {
+    state: State = {
         hasError: false,
+    };
+
+    static getDerivedStateFromError(): State {
+        return { hasError: true}
     }
 
-    componentDidCatch() {
-        this.setState({ hasError: true });
+    componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
+        console.log({ error, errorInfo });
     }
 
-    reloadPage = () =>  {
-        window.URL = window.URL;
-    }
+    // reloadPage = () =>  {
+    //     window.URL = window.URL;
+    // }
 
-    // navigateBack = () => this.props.history.goBack();
+    navigateBack = () => this.props.history.goBack();
 
     render() {
         if (this.state.hasError) {
             return (
                 <div>
                     <h2>nått gick fel</h2>
-                    <button onClick={this.reloadPage}>
-                       <a href="">Ladda om sidan</a> 
+                    <button onClick={this.navigateBack} >
+                       Gå tillbaka
                     </button>
                 </div>
-            )
-        }
+            ); 
+        } 
         return this.props.children;
-    }
-}
+    } 
+} 
+
+export default withRouter(ErrorBoundary);
 
 // export function testErrorBoundary() {
 //     const nullVariable: any = null;
