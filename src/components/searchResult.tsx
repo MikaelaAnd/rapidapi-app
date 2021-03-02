@@ -1,13 +1,11 @@
+import ResultHeader from './resultHeader';
+import './searchResultPage.css';
+
 function SearchResult() {
     return (
-    <div>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
-        <p>Här kommer en del bilder</p>
+    <div className="background-image">
+        <ResultHeader />
+
     </div>
     );
 }
