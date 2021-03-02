@@ -2,13 +2,14 @@ import { CSSProperties } from "react";
 import ResultHeader from "./resultHeader";
 import './CSS/drinkItem.css'
 
+
 function DrinkItem() {
     return (
-        <div>
+        <div style={{...background}}>
             <ResultHeader />
 
-            <div className="contentContainer">
-                <div style={{ ...centered, }}>
+            <div className="drink-item-container">
+                <div style={{ ...centered }}>
                     <div className="drinkPicture">
                         bild
                     </div>
@@ -28,14 +29,14 @@ function DrinkItem() {
     );
 }
 
+const background: CSSProperties = {
+    background: 'black'
+}
+
 const centered: CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
 }
-
-// const font: CSSProperties = {
-//     fontSize: '96px',
-// }
 
 export default DrinkItem; 

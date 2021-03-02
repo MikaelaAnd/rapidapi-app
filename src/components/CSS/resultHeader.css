@@ -26,16 +26,6 @@
 }
 
 /* Content */
-.result-header > input {
-    float: right;
-    margin-right: 2rem;
-    margin-top: 2.5rem;
-    height: 1.5rem;
-    width: 20rem;
-    border-radius: 25px;
-    border: unset;
-    padding: .2rem;
-}
 
 /* Smaller screens */
 @media (max-width: 550px) {
@@ -50,11 +40,5 @@
         padding: 0;
         margin: 0.2rem 0;
 
-    }
-
-    .result-header > input {
-        width: 12rem;
-        margin: 0;
-      
     }
 }
