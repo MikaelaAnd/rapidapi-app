@@ -1,5 +1,4 @@
 import { CSSProperties } from "react";
-// import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 
 
 export const fullScreen: CSSProperties = {
@@ -7,6 +6,11 @@ export const fullScreen: CSSProperties = {
     height: '100%',
 }
 
-export const fontQuicksand: CSSProperties = {
-    fontFamily: 'Quicksand',
+export const flex: CSSProperties = {
+    display: 'flex',
+}
+
+export const noTextDecoration: CSSProperties = {
+    textDecoration: 'none',
+    color: 'black',
 }
