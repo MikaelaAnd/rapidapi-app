@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import SearchResult from "./searchResult";
 import Startpage from "./startpage";
 import './CSS/startPage.css';
+import ErrorBoundary from "./errorBoundary";
 
 
 interface Props { }
@@ -49,18 +50,20 @@ class Main extends Component<Props, State> {
         return (
             <div>
                 <Switch>
-                    <Route exact path="/">
-                        <Startpage
-                            delay={500}
-                            onChange={this.handleNewSearchValue}
-                        />
-                    </Route>
-                    <Route path="/searchResult">
-                        <SearchResult
-                            delay={500}
-                            onChange={this.handleNewSearchValue}
-                        />
-                    </Route>
+                    <ErrorBoundary>
+                        <Route exact path="/">
+                            <Startpage
+                                delay={500}
+                                onChange={this.handleNewSearchValue}
+                            />
+                        </Route>
+                        <Route path="/searchResult">
+                            <SearchResult
+                                delay={500}
+                                onChange={this.handleNewSearchValue}
+                            />
+                        </Route>
+                    </ErrorBoundary>
                 </Switch>
             </div>
         );
