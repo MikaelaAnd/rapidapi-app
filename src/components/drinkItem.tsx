@@ -1,42 +1,45 @@
-import { CSSProperties } from "react";
-import ResultHeader from "./resultHeader";
-import './CSS/drinkItem.css'
+import { Component, CSSProperties } from "react"
+import { Link } from "react-router-dom"
+import { noTextDecoration } from "../css"
+import { Cocktail } from "./layout"
 
 
-function DrinkItem() {
-    return (
-        <div style={{...background}}>
-            <ResultHeader />
+interface Props {
+    drinkItem: Cocktail;
+}
+class DrinkItem extends Component<Props> {
+    description = this.props.drinkItem.strDrink;
 
-            <div className="drink-item-container">
-                <div style={{ ...centered }}>
-                    <div className="drinkPicture">
-                        bild
-                    </div>
+    render() {
+        return (
+            <Link
+                to={"/drinkRecipe/" + this.props.drinkItem.idDrink}
+                style={noTextDecoration}
+            >
+                <div style={imageContainer}>
+                    <img
+                        src={this.props.drinkItem.strDrinkThumb}
+                        style={image}
+                        alt={this.description}
+                    />
+                    <span>{this.props.drinkItem.strDrink} </span>
                 </div>
-
-                <div>
-                    <h2 className="drinkName">
-                        Margarita
-                    </h2>
-                    <p>Ingridiens</p>
-                    <p className="drinkDescription">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt tempora non, fuga recusandae aut at magnam suscipit libero accusantium delectus cum quo porro, deleniti molestiae odit repellat eaque sit eius!
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
+            </Link>
+        )
+    }
 }
 
-const background: CSSProperties = {
-    background: 'black'
+const imageContainer: CSSProperties = {
+    backgroundColor: 'white',
+    paddingBottom: '1rem',
+    textAlign: 'center',
+    fontSize: '1.3rem',
+    borderRadius: '.5rem',
 }
 
-const centered: CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
+const image: CSSProperties = {
+    width: '100%',
+    objectFit: 'cover',
 }
 
-export default DrinkItem; 
+export default DrinkItem
