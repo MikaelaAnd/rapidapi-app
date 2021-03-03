@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import DrinkRecipe from "./drinkRecipe";
 import { Cocktail } from "./layout";
 import MasterView from "./masterView";
-
 interface Props {
     drinks: Cocktail[];
 }
