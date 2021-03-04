@@ -1,6 +1,8 @@
-import { Component, CSSProperties } from "react";
+import React, { Component, CSSProperties } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { Cocktail } from "./layout";
+import RecipeImage from "./recipeImage";
+import RecipeText from "./recipeText";
 
 interface Props extends RouteComponentProps<{ id: string }> { }
 
@@ -31,7 +33,6 @@ class DrinkRecipe extends Component<Props, State> {
             )
             .then((data) => {
                 this.setState({ drink: data.drinks })
-                console.log(this.state.drink)
             })
             .catch(function (err) {
                 console.log('Fetch Error :-S', err);
@@ -42,18 +43,12 @@ class DrinkRecipe extends Component<Props, State> {
     render() {
         return (
             <div style={rootStyle}>
-                <div style={imageContainer}>
-                    <img src={this.state.drink[0]?.strDrinkThumb} style={image} alt='' />
-                </div>
-                <div style={recipeContainer} >
-                    <h2>
-                        {this.state.drink[0]?.strDrink}
-                    </h2>
-                    <p>{this.state.drink[0]?.strIngredient}</p>
-                    <p>
-                        {this.state.drink[0]?.strInstructions}
-                    </p>
-                </div>
+                <RecipeImage
+                    drink={this.state.drink}
+                />
+                <RecipeText
+                    drink={this.state.drink}
+                />        
             </div>
         );
     }
@@ -63,23 +58,6 @@ const rootStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'center',
     padding: '10rem 4rem 4rem 4rem',
-}
-
-const imageContainer: CSSProperties = {
-    display: 'flex', 
-    marginRight: '5rem',
-    width: '40%'  
-}
-
-const image: CSSProperties = {
-    width: '100%',
-    objectFit: 'cover',
-}
-
-const recipeContainer: CSSProperties = {
-    width: '40%',
-    objectFit: 'cover',
-    textAlign: 'justify',
 }
 
 export default withRouter(DrinkRecipe); 
