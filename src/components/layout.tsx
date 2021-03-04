@@ -35,8 +35,7 @@ class Layout extends Component<Props, State> {
             }
          )
          .then((data) => {
-            this.setState({ drinks: data.drinks })
-            console.log(this.state.drinks)
+            this.setState({ drinks: data.drinks || [] })
          })
          .catch(function (err) {
             console.log('Fetch Error :-S', err);
@@ -65,7 +64,21 @@ export interface Cocktail {
    strDrink: string,
    strGlass: string,
    strDrinkThumb: string,
-   strIngredient: string,
+   strIngredient1: string,
+   strIngredient2: string,
+   strIngredient3: string,
+   strIngredient4: string,
+   strIngredient5: string,
+   strIngredient6: string,
+   strIngredient7: string,
+   strIngredient8: string,
+   strIngredient9: string,
+   strIngredient10: string,
+   strIngredient11: string,
+   strIngredient12: string,
+   strIngredient13: string,
+   strIngredient14: string,
+   strIngredient15: string,
    strMeasure: string,
    strInstructions: string
 }
