@@ -19,7 +19,7 @@ function RecipeText(props: Props) {
 
     return (
         <div style={recipeContainer} >
-            <h2>
+            <h2 style={drinkName}>
                 {props.drink[0]?.strDrink}
             </h2>
             
@@ -56,10 +56,18 @@ const recipeContainer: CSSProperties = {
     width: '40%',
     objectFit: 'cover',
     textAlign: 'justify',
+    display: 'flex',
+    flexDirection: 'column',
+    alignContent: 'center'
+}
+
+const drinkName: CSSProperties = {
+    fontSize: 'xx-large'
 }
 
 const listStyle: CSSProperties = {
-    listStyleType: 'none'
+    listStyleType: 'none',
+    fontSize: 'small'
 }
 
 export default RecipeText;
