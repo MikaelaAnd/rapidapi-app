@@ -35,8 +35,7 @@ class Layout extends Component<Props, State> {
             }
          )
          .then((data) => {
-            this.setState({ drinks: data.drinks })
-            console.log(this.state.drinks)
+            this.setState({ drinks: data.drinks || [] })
          })
          .catch(function (err) {
             console.log('Fetch Error :-S', err);

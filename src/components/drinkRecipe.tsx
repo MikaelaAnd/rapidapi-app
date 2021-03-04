@@ -43,7 +43,7 @@ class DrinkRecipe extends Component<Props, State> {
         return (
             <div style={rootStyle}>
                 <div style={imageContainer}>
-                    <img src={this.state.drink[0]?.strDrinkThumb} style={image} />
+                    <img src={this.state.drink[0]?.strDrinkThumb} style={image} alt='' />
                 </div>
                 <div style={recipeContainer} >
                     <h2>

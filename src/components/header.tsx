@@ -47,6 +47,7 @@ class Header extends Component<Props, State> {
                     style={inputStyle}
                     placeholder="Search cocktail by name or ingredient"
                     onChange={this.handleChange}
+                    value={this.state.value}
                 />
             </div>
         );
