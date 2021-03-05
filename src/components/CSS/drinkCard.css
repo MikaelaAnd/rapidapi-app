@@ -1,0 +1,13 @@
+
+.image-container-drinkCard {
+    background-color: white;
+    padding-bottom: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+}
+
+.image-drinkCard {
+    width: 100%;
+    object-fit: cover;
+}

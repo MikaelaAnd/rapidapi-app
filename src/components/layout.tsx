@@ -5,13 +5,15 @@ import Main from './main';
 interface Props { }
 
 interface State {
-   drinks: Cocktail[]
+   drinks: Cocktail[];
+   showStartPageStyle: boolean;
 }
 class Layout extends Component<Props, State> {
    private readonly COCKTAIL_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.'
 
    state: State = {
-      drinks: []
+      drinks: [],
+      showStartPageStyle: true
    }
 
    // Handle user input
@@ -36,10 +38,19 @@ class Layout extends Component<Props, State> {
          )
          .then((data) => {
             this.setState({ drinks: data.drinks })
+            this.toggleInput()
          })
          .catch(function (err) {
             console.log('Fetch Error :-S', err);
          });
+   }
+
+   toggleInput() {
+      if (this.state.drinks == []) {
+         this.setState({ showStartPageStyle: true })
+      } else {
+         this.setState({ showStartPageStyle: false })
+      }
    }
 
    render() {
@@ -48,9 +59,11 @@ class Layout extends Component<Props, State> {
             <Header
                delay={500}
                onChange={this.handleNewSearchValue}
+               toggleInputStyle={this.state.showStartPageStyle}
             />
             <Main
                drinks={this.state.drinks}
+               toggleBackgroundStyle={this.state.showStartPageStyle}
             />
          </div>
       );

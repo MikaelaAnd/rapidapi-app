@@ -5,14 +5,15 @@ import { Cocktail } from "./layout";
 
 
 interface Props {
-    drinks: Cocktail[]
+    drinks: Cocktail[];
+    toggleBackgroundStyle: boolean;
 }
 
 class MasterView extends Component<Props> {
 
     render() {
         return (
-            <div className="background-image">
+            <div className={this.props.toggleBackgroundStyle ? "background-image" : "background-image-white"}>
                 <div style={rootStyle}>
                     {this.props.drinks.map((drink, index) =>
                         <DrinkCard
