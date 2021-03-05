@@ -1,15 +1,15 @@
-## RapiDapi 
+# RapiDapi 
 RapiDapi is a web app developed with typescript and react where you can search for drinks and recipes.
 
 Created by me, [Felicia](https://github.com/feliciavonbraun), [Jennifer](https://github.com/JenniferTendell), [Marie](https://github.com/mariewag).
 
-Try out our app [here!]()
-### To start the project: 
+Netlify-link TBC...
+## To start the project: 
 1. 
-# `npm install`
+## `npm install`
 
 2.
-# `npm start``
+## `npm start`
 
 and voilá. Go ahead and start making those cocktails!!!
 
