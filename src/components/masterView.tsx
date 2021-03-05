@@ -1,6 +1,6 @@
 import { Component, CSSProperties } from "react";
 import "./CSS/backgroundImage.css";
-import DrinkItem from "./drinkItem";
+import DrinkCard from "./drinkCard";
 import { Cocktail } from "./layout";
 
 
@@ -15,8 +15,8 @@ class MasterView extends Component<Props> {
             <div className="background-image">
                 <div style={rootStyle}>
                     {this.props.drinks.map((drink, index) =>
-                        <DrinkItem
-                            drinkItem={drink}
+                        <DrinkCard
+                            drinkCard={drink}
                             key={index}
                         />)}
                 </div>
