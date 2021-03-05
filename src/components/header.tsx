@@ -1,6 +1,7 @@
-import { ChangeEvent, Component, CSSProperties } from 'react';
+import { ChangeEvent, Component } from 'react';
 import { Link } from 'react-router-dom';
 import { noTextDecoration } from '../css';
+import "./CSS/header.css";
 
 interface Props {
     onChange: (value: string) => void;
@@ -40,12 +41,12 @@ class Header extends Component<Props, State> {
 
     render() {
         return (
-            <div style={rootStyle}>
+            <div className="rootStyle">
                 <Link to="/" style={noTextDecoration}>
-                    <h1 style={logo}>RapiDapi</h1>
+                    <h1 className="logo">RapiDapi</h1>
                 </Link>
                 <input
-                    style={this.props.toggleInputStyle ? largeInputStyle : smallInputStyle }
+                    className={this.props.toggleInputStyle ? "largeInputStyle" : "smallInputStyle" }
                     placeholder="Search cocktail by name or ingredient"
                     onChange={this.handleChange}
                     value={this.state.value}
@@ -55,45 +56,6 @@ class Header extends Component<Props, State> {
     }
 }
 
-const rootStyle: CSSProperties = {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    position: 'absolute',
-    width: '100%',
-    height: '8rem',
-    background: 'linear-gradient(180deg, #5D2232 12.51%, rgba(140, 76, 106, 0) 100%)',
-}
-
-const logo: CSSProperties = {
-    fontFamily: 'Rochester, cursive',
-    marginLeft: '4rem',
-    color: 'white',
-    fontSize: '4rem',
-    fontWeight: 500,
-    paddingRight: '2rem',
-}
-
-const largeInputStyle: CSSProperties = {
-    position: 'absolute',
-    top: '15rem',
-    height: '2rem',
-    width: '40%',
-    borderRadius: '.5rem',
-    border: 'unset',
-    outline: 'none',
-    padding: '.5rem 1rem',
-}
-
-const smallInputStyle: CSSProperties = {
-    margin: '0 auto',
-    height: '2rem',
-    width: '25rem',
-    borderRadius: '.5rem',
-    border: 'unset',
-    outline: 'none',
-    padding: '.5rem 1rem',
-}
 
 
 export default Header;
