@@ -1,6 +1,6 @@
 import { Component, ErrorInfo } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
-import './CSS/backgroundImage.css'
+import './CSS/masterView.css'
 import './CSS/errorBoundary.css';
 
 interface Props extends RouteComponentProps{}
