@@ -5,6 +5,7 @@ import { Cocktail } from "./layout";
 import MasterView from "./masterView";
 interface Props {
     drinks: Cocktail[];
+    toggleBackgroundStyle: boolean;
 }
 
 function Main(props: Props) {
@@ -16,6 +17,7 @@ function Main(props: Props) {
                     <Route exact path="/">
                         <MasterView
                             drinks={props.drinks}
+                            toggleBackgroundStyle={props.toggleBackgroundStyle}
                         />
                     </Route>
                     <Route path="/drinkRecipe/:id">

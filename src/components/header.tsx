@@ -5,6 +5,7 @@ import { noTextDecoration } from '../css';
 interface Props {
     onChange: (value: string) => void;
     delay?: number;
+    toggleInputStyle: boolean;
 }
 interface State {
     value: string;
@@ -17,7 +18,7 @@ class Header extends Component<Props, State> {
 
     // Save user input in 'value'
     handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-        this.setState({ value: event.target.value })
+        this.setState({ value: event.target.value }) 
     }
 
     // Update state
@@ -32,7 +33,7 @@ class Header extends Component<Props, State> {
                     onChange(this.state.value)
                 }, delay);
             } else {
-                onChange(this.state.value);
+                onChange(this.state.value); 
             }
         }
     }
@@ -44,7 +45,7 @@ class Header extends Component<Props, State> {
                     <h1 style={logo}>RapiDapi</h1>
                 </Link>
                 <input
-                    style={inputStyle}
+                    style={this.props.toggleInputStyle ? largeInputStyle : smallInputStyle }
                     placeholder="Search cocktail by name or ingredient"
                     onChange={this.handleChange}
                     value={this.state.value}
@@ -57,6 +58,7 @@ class Header extends Component<Props, State> {
 const rootStyle: CSSProperties = {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'center',
     position: 'absolute',
     width: '100%',
     height: '8rem',
@@ -69,15 +71,25 @@ const logo: CSSProperties = {
     color: 'white',
     fontSize: '4rem',
     fontWeight: 500,
-    paddingRight: '3rem',
-
+    paddingRight: '2rem',
 }
 
-const inputStyle: CSSProperties = {
+const largeInputStyle: CSSProperties = {
+    position: 'absolute',
+    top: '15rem',
+    height: '2rem',
+    width: '40%',
+    borderRadius: '.5rem',
+    border: 'unset',
+    outline: 'none',
+    padding: '.5rem 1rem',
+}
+
+const smallInputStyle: CSSProperties = {
     margin: '0 auto',
     height: '2rem',
     width: '25rem',
-    borderRadius: '25px',
+    borderRadius: '.5rem',
     border: 'unset',
     outline: 'none',
     padding: '.5rem 1rem',
