@@ -1,28 +1,24 @@
-# RapiDapi 
-
-RapiDapi is a web page done with typescript and react where you can search for drinks and recipes.
+## RapiDapi 
+RapiDapi is a web app developed with typescript and react where you can search for drinks and recipes.
 
 Created by me, [Felicia](https://github.com/feliciavonbraun), [Jennifer](https://github.com/JenniferTendell), [Marie](https://github.com/mariewag).
 
 Try out our app [here!]()
+### To start the project: 
+1. 
+# `npm install`
+
+2.
+# `npm start``
+
+and voilá. Go ahead and start making those cocktails!!!
 
 
 
 
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm i`
-
-To get node_modules and there after you run
-
-### `npm start`
-
+_________________________________________________________________________________
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
