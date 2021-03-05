@@ -12,10 +12,11 @@
     object-fit: cover;
 }
 
-@media (max-width: 330px) {
+/* Mobile view */
+@media (max-width: 414px) {
     .image-container-drinkCard {
-        width: 70%;
-        background-position: center;
+        width: 75%;
+        margin: 0 auto;
     }
     
 }

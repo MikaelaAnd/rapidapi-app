@@ -9,7 +9,6 @@
     padding: .5rem 1rem;
 }
 
-
 .smallInputStyle {
     margin: 0 auto;
     height: 2rem;
@@ -39,7 +38,7 @@
 }
 
 /* Tablet view */
-@media (max-width: 620px) {
+@media (max-width: 768px) {
     .rootStyle {
         display: flex;
         flex-direction: column;
@@ -57,13 +56,12 @@
     }
     
     .logo {
-        font-size: 3rem;
-        margin: 0;
+        margin: 2rem;
     }
 }
 
-/* Phone view */
-@media (max-width: 400px) {
+/* Mobile view */
+@media (max-width: 414px) {
     .smallInputStyle {
         width: 60%;
         padding: .1rem 0.2rem;

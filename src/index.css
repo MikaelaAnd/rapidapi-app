@@ -6,3 +6,7 @@ html, body {
     background:white;
     font-family: 'Quicksand', sans-serif;
 }
+
+ul {
+    padding: 0;
+}

@@ -6,7 +6,7 @@
 }
 
 /* Tablet view */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .drinkRecipeContainer {
         flex-direction: column;
         align-items: center;
