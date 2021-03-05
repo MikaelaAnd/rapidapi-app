@@ -6,13 +6,6 @@ interface Props {
 }
 
 function RecipeText(props: Props) {
-    /*
-        for (let i = 1; i < 16; i++) {
-            const measurement = 'strMeasure' + [i];
-            const ingredients = 'strIngredient' + [i];
-    
-        }
-    */
 
     return (
         <div className="drinkTextContainer" >
