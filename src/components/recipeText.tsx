@@ -1,14 +1,11 @@
-import { CSSProperties } from "react";
 import { Cocktail } from "./layout";
-
+import './CSS/drinkRecipe.css'
 
 interface Props {
     drink: Cocktail[]
 }
 
 function RecipeText(props: Props) {
-
-
     /*
         for (let i = 1; i < 16; i++) {
             const measurement = 'strMeasure' + [i];
@@ -18,12 +15,12 @@ function RecipeText(props: Props) {
     */
 
     return (
-        <div style={recipeContainer} >
-            <h2 style={drinkName}>
+        <div className="recipeContainer" >
+            <h2 className="drinkName">
                 {props.drink[0]?.strDrink}
             </h2>
             
-                <ul style={listStyle}>
+                <ul className="listStyle">
                     <li>{props.drink[0]?.strMeasure1} {props.drink[0]?.strIngredient1}</li>
                     <li>{props.drink[0]?.strMeasure2} {props.drink[0]?.strIngredient2}</li>
                     <li>{props.drink[0]?.strMeasure3} {props.drink[0]?.strIngredient3}</li>
@@ -40,34 +37,11 @@ function RecipeText(props: Props) {
                     <li>{props.drink[0]?.strMeasure14} {props.drink[0]?.strIngredient14}</li>
                     <li>{props.drink[0]?.strMeasure15} {props.drink[0]?.strIngredient15}</li>
                 </ul>
-
-           
-
-
             <p>
                 {props.drink[0]?.strInstructions}
             </p>
         </div>
-
     )
-}
-
-const recipeContainer: CSSProperties = {
-    width: '40%',
-    objectFit: 'cover',
-    textAlign: 'justify',
-    display: 'flex',
-    flexDirection: 'column',
-    alignContent: 'center'
-}
-
-const drinkName: CSSProperties = {
-    fontSize: 'xx-large'
-}
-
-const listStyle: CSSProperties = {
-    listStyleType: 'none',
-    fontSize: 'small'
 }
 
 export default RecipeText;

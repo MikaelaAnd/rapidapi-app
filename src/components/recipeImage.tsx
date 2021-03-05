@@ -1,27 +1,15 @@
-import { CSSProperties } from "react";
 import { Cocktail } from "./layout";
-
+import './CSS/drinkRecipe.css'
 interface Props {
     drink: Cocktail[]
 }
 
 function RecipeImage(props: Props) {
     return (
-        <div style={imageContainer}>
-            <img src={props.drink[0]?.strDrinkThumb} style={image} alt='' />
+        <div className="recipeImageContainer">
+            <img src={props.drink[0]?.strDrinkThumb} className="recipeImage" alt='Drink' />
         </div>
     )
-}
-
-const imageContainer: CSSProperties = {
-    display: 'flex', 
-    marginRight: '5rem',
-    width: '40%'  
-}
-
-const image: CSSProperties = {
-    width: '100%',
-    objectFit: 'cover',
 }
 
 export default RecipeImage;

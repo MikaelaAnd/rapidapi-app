@@ -1,8 +1,10 @@
-import { Component, CSSProperties } from "react";
+
+import { Component } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { Cocktail } from "./layout";
 import RecipeImage from "./recipeImage";
 import RecipeText from "./recipeText";
+import './CSS/drinkRecipe.css'
 
 interface Props extends RouteComponentProps<{ id: string }> { }
 
@@ -42,7 +44,7 @@ class DrinkRecipe extends Component<Props, State> {
 
     render() {
         return (
-            <div style={rootStyle}>
+            <div className="drinkRecipeContainer">
                 <RecipeImage
                     drink={this.state.drink}
                 />
@@ -52,12 +54,19 @@ class DrinkRecipe extends Component<Props, State> {
             </div>
         );
     }
-}
 
-const rootStyle: CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    padding: '10rem 4rem 4rem 4rem',
+    // screenChanging(event: { matches: any; }) {
+    //     window.matchMedia('(max-width: 600px)').addEventListener('change', screenTest);
+    //     MediaQueryList
+        
+    //     if (event.matches) {
+    //         <p>this is a small screen</p>
+    //     } else {
+    //         <p>this is a BIG screen</p>
+    //     }
+    
+    
+    // }
 }
 
 export default withRouter(DrinkRecipe); 

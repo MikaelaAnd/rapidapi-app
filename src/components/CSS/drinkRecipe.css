@@ -1,0 +1,44 @@
+/* drinkRecipe */
+.drinkRecipeContainer {
+    display:flex;
+    justify-content: center;
+    padding: 10rem 4rem 4rem 4rem;
+}
+
+/* recipeText */
+.drinkRecipeContainer {
+    width: 40%;
+    object-fit: cover;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.drinkName {
+    font-size: 'xx-large'
+}
+
+.listStyle {
+    list-style-type: none;
+    font-size: 'small'
+}
+
+/* drinkImage */
+.recipeImageContainer {
+    display: flex;
+    margin-right: 5rem;
+    width: 40%; 
+}
+
+.recipeImage {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 650px) {
+    .recipeContiner {
+        flex-direction: column;
+    }
+}
