@@ -5,18 +5,16 @@ import { Cocktail } from "./layout";
 import RecipeImage from "./recipeImage";
 import RecipeText from "./recipeText";
 import './CSS/drinkRecipe.css'
+import ErrorBoundary from "./errorBoundary";
 
 interface Props extends RouteComponentProps<{ id: string }> { }
-
 interface State {
     drink: Cocktail[]
 }
-
 class DrinkRecipe extends Component<Props, State> {
     state: State = { drink: [] }
 
     componentDidMount() {
-
         const drinkId = this.props.match.params.id
 
         // Get specific drink from API
@@ -39,34 +37,24 @@ class DrinkRecipe extends Component<Props, State> {
             .catch(function (err) {
                 console.log('Fetch Error :-S', err);
             });
-
     }
 
     render() {
         return (
             <div className="drinkRecipeContainer">
-                <RecipeImage
-                    drink={this.state.drink}
-                />
-                <RecipeText
-                    drink={this.state.drink}
-                />        
+                <ErrorBoundary>
+                    <RecipeImage
+                        drink={this.state.drink}
+                    />
+                </ErrorBoundary>
+                <ErrorBoundary>
+                    <RecipeText
+                        drink={this.state.drink}
+                    />
+                </ErrorBoundary>  
             </div>
         );
     }
-
-    // screenChanging(event: { matches: any; }) {
-    //     window.matchMedia('(max-width: 600px)').addEventListener('change', screenTest);
-    //     MediaQueryList
-        
-    //     if (event.matches) {
-    //         <p>this is a small screen</p>
-    //     } else {
-    //         <p>this is a BIG screen</p>
-    //     }
-    
-    
-    // }
 }
 
 export default withRouter(DrinkRecipe); 
