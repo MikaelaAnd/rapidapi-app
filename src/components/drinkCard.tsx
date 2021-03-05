@@ -3,13 +3,11 @@ import { Link } from "react-router-dom";
 import { noTextDecoration } from "../css";
 import { Cocktail } from "./layout";
 import './CSS/drinkCard.css';
-
-
 interface Props {
     drinkCard: Cocktail;
 }
 class DrinkCard extends Component<Props> {
-    description = this.props.drinkCard.strDrink;
+    imageDescription = this.props.drinkCard.strDrink;
 
     render() {
         return (
@@ -21,7 +19,7 @@ class DrinkCard extends Component<Props> {
                     <img
                         src={this.props.drinkCard.strDrinkThumb}
                         className="image-drinkCard"
-                        alt={this.description}
+                        alt={this.imageDescription}
                     />
                     <span>{this.props.drinkCard.strDrink} </span>
                 </div>

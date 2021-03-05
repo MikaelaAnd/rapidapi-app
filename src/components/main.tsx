@@ -9,7 +9,6 @@ interface Props {
 }
 
 function Main(props: Props) {
-    
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <div>
@@ -28,6 +27,5 @@ function Main(props: Props) {
         </Suspense>
     );
 }
-
 
 export default Main;

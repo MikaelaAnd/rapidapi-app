@@ -2,7 +2,6 @@ import { ChangeEvent, Component } from 'react';
 import { Link } from 'react-router-dom';
 import { noTextDecoration } from '../css';
 import "./CSS/header.css";
-
 interface Props {
     onChange: (value: string) => void;
     delay?: number;
@@ -11,18 +10,16 @@ interface Props {
 interface State {
     value: string;
 }
-
-
 class Header extends Component<Props, State> {
     timer?: NodeJS.Timeout;
     state: State = { value: '' }
 
-    // Save user input in 'value'
+    // Updates value to match users input
     handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         this.setState({ value: event.target.value }) 
     }
 
-    // Update state
+    // If user changes value, state updates
     componentDidUpdate(_: Props, prevState: State) {
         const { delay, onChange } = this.props;
         const { value } = this.state;

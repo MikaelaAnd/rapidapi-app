@@ -8,7 +8,6 @@ interface Props {
     toggleBackgroundStyle: boolean;
 }
 class MasterView extends Component<Props> {
-
     render() {
         return (
             <div className={this.props.toggleBackgroundStyle ? "background-image" : "background-image-white"}>

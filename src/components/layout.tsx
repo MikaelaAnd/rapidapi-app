@@ -45,6 +45,7 @@ class Layout extends Component<Props, State> {
          });
    }
 
+   // Decides which input field to display 
    toggleInput() {
       if (this.state.drinks == []) {
          this.setState({ showStartPageStyle: true })
@@ -71,7 +72,6 @@ class Layout extends Component<Props, State> {
 }
 
 export default Layout;
-
 export interface Cocktail {
    idDrink: string,
    strDrink: string,

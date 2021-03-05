@@ -15,7 +15,6 @@ class DrinkRecipe extends Component<Props, State> {
     state: State = { drink: [] }
 
     componentDidMount() {
-
         const drinkId = this.props.match.params.id
 
         // Get specific drink from API
@@ -38,7 +37,6 @@ class DrinkRecipe extends Component<Props, State> {
             .catch(function (err) {
                 console.log('Fetch Error :-S', err);
             });
-
     }
 
     render() {
