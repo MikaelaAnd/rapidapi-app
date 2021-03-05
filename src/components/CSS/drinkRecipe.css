@@ -1,5 +1,5 @@
 /* drinkRecipe */
-.recipeContiner {
+.drinkRecipeContainer {
     display:flex;
     justify-content: center;
     padding: 10rem 4rem 4rem 4rem;
