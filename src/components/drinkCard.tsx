@@ -5,24 +5,24 @@ import { Cocktail } from "./layout"
 
 
 interface Props {
-    drinkItem: Cocktail;
+    drinkCard: Cocktail;
 }
-class DrinkItem extends Component<Props> {
-    description = this.props.drinkItem.strDrink;
+class DrinkCard extends Component<Props> {
+    description = this.props.drinkCard.strDrink;
 
     render() {
         return (
             <Link
-                to={"/drinkRecipe/" + this.props.drinkItem.idDrink}
+                to={"/drinkRecipe/" + this.props.drinkCard.idDrink}
                 style={noTextDecoration}
             >
                 <div style={imageContainer}>
                     <img
-                        src={this.props.drinkItem.strDrinkThumb}
+                        src={this.props.drinkCard.strDrinkThumb}
                         style={image}
                         alt={this.description}
                     />
-                    <span>{this.props.drinkItem.strDrink} </span>
+                    <span>{this.props.drinkCard.strDrink} </span>
                 </div>
             </Link>
         )
@@ -42,4 +42,4 @@ const image: CSSProperties = {
     objectFit: 'cover',
 }
 
-export default DrinkItem
+export default DrinkCard;
