@@ -1,0 +1,27 @@
+.drinkTextContainer {
+    object-fit: cover;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.drinkName {
+    font-size: 'xx-large'
+}
+
+.listStyle {
+    list-style-type: none;
+    font-size: small;
+}
+
+/* Tablet view */
+@media (max-width: 650px) {
+    .drinkTextContainer {
+        margin: 0 auto;
+    }
+
+    .drinkName {
+        margin: 1rem auto;
+    }
+}

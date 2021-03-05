@@ -30,5 +30,4 @@ class DrinkCard extends Component<Props> {
     }
 }
 
-
 export default DrinkCard;
