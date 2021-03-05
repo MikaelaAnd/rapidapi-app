@@ -1,6 +1,7 @@
-import { Component, CSSProperties, ErrorInfo } from "react";
+import { Component, ErrorInfo } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import './CSS/backgroundImage.css'
+import './CSS/errorBoundary.css';
 
 interface Props extends RouteComponentProps{}
 interface State {
@@ -28,9 +29,9 @@ class ErrorBoundary extends Component<Props, State> {
         if (this.state.hasError) {
             return (
                 <div className="background-image">
-                    <div  style={ errorBoundaryContainer }>
+                    <div className="error-boundary-container">
                         <h2>Oops something went wrong</h2>
-                        <button onClick={this.reloadPage}  style={ button }>
+                        <button onClick={this.reloadPage}  className="button">
                         Go back
                         </button>
                     </div>
@@ -42,27 +43,3 @@ class ErrorBoundary extends Component<Props, State> {
 } 
 
 export default withRouter(ErrorBoundary);
-
-const errorBoundaryContainer: CSSProperties = {
-    position: "absolute",
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    padding: '1rem',
-    background: 'rgba(255, 255, 255, 0.587)',
-    left: '50%',
-    top: '50%',
-    transform: 'translate(-50%, -50%)'
-}
-
-const button: CSSProperties = {
-    width: '7rem',
-    height: '2rem',
-    borderRadius: '1rem',
-    background: '#5D2232',
-    color: 'white',
-    border: 'none',
-    letterSpacing: '0.1rem',
-}
-
