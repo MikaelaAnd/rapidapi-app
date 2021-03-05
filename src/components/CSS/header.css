@@ -13,7 +13,7 @@
 .smallInputStyle {
     margin: 0 auto;
     height: 2rem;
-    width: 25rem;
+    width: 15rem;
     border-radius: .5rem;
     border: unset;
     outline: none;
@@ -36,5 +36,46 @@
     color: white;
     font-size: 4rem;
     font-weight: 500;
-    padding-right: 2rem;
+}
+
+/* Tablet view */
+@media (max-width: 620px) {
+    .rootStyle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .largeInputStyle {
+        width: 80%;
+    }
+    
+    .smallInputStyle {
+        width: 60%;
+        margin-top: 1rem;
+        padding: .2rem .5rem;
+    }
+    
+    .logo {
+        font-size: 3rem;
+        margin: 0;
+    }
+}
+
+/* Phone view */
+@media (max-width: 400px) {
+    .smallInputStyle {
+        width: 60%;
+        padding: .1rem 0.2rem;
+    }
+
+    .largeInputStyle {
+        width: 90%;
+        padding: .2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
 }

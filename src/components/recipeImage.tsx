@@ -1,5 +1,5 @@
 import { Cocktail } from "./layout";
-import './CSS/drinkRecipe.css'
+import './CSS/recipeImage.css'
 interface Props {
     drink: Cocktail[]
 }

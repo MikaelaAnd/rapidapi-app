@@ -1,0 +1,17 @@
+.recipeImageContainer {
+    display: flex;
+    margin-right: 5rem;
+    width: 50%;
+}
+
+.recipeImage {
+    min-width: 10rem;
+    object-fit: cover;
+}
+
+/* Tablet view */
+@media (max-width: 650px) {
+    .recipeImageContainer {
+        margin-right: 0;
+    }
+}

@@ -1,5 +1,5 @@
 import { Cocktail } from "./layout";
-import './CSS/drinkRecipe.css'
+import './CSS/recipeText.css'
 
 interface Props {
     drink: Cocktail[]
@@ -15,7 +15,7 @@ function RecipeText(props: Props) {
     */
 
     return (
-        <div className="recipeContainer" >
+        <div className="drinkTextContainer" >
             <h2 className="drinkName">
                 {props.drink[0]?.strDrink}
             </h2>
