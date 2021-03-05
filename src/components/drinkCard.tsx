@@ -1,7 +1,8 @@
-import { Component, CSSProperties } from "react"
-import { Link } from "react-router-dom"
-import { noTextDecoration } from "../css"
-import { Cocktail } from "./layout"
+import { Component } from "react";
+import { Link } from "react-router-dom";
+import { noTextDecoration } from "../css";
+import { Cocktail } from "./layout";
+import './CSS/drinkCard.css';
 
 
 interface Props {
@@ -16,10 +17,10 @@ class DrinkCard extends Component<Props> {
                 to={"/drinkRecipe/" + this.props.drinkCard.idDrink}
                 style={noTextDecoration}
             >
-                <div style={imageContainer}>
+                <div className="image-container-drinkCard">
                     <img
                         src={this.props.drinkCard.strDrinkThumb}
-                        style={image}
+                        className="image-drinkCard"
                         alt={this.description}
                     />
                     <span>{this.props.drinkCard.strDrink} </span>
@@ -29,17 +30,5 @@ class DrinkCard extends Component<Props> {
     }
 }
 
-const imageContainer: CSSProperties = {
-    backgroundColor: 'white',
-    paddingBottom: '1rem',
-    textAlign: 'center',
-    fontSize: '1.3rem',
-    borderRadius: '.5rem',
-}
-
-const image: CSSProperties = {
-    width: '100%',
-    objectFit: 'cover',
-}
 
 export default DrinkCard;

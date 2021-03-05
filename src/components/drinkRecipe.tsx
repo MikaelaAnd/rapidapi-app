@@ -1,4 +1,4 @@
-import React, { Component, CSSProperties } from "react";
+import { Component, CSSProperties } from "react";
 import { RouteComponentProps, withRouter } from "react-router-dom";
 import { Cocktail } from "./layout";
 import RecipeImage from "./recipeImage";
