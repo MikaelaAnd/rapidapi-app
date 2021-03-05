@@ -1,0 +1,40 @@
+.largeInputStyle {
+    position: absolute;
+    top: 15rem;
+    height: 2rem;
+    width: 40%;
+    border-radius: .5rem;
+    border: unset;
+    outline: none;
+    padding: .5rem 1rem;
+}
+
+
+.smallInputStyle {
+    margin: 0 auto;
+    height: 2rem;
+    width: 25rem;
+    border-radius: .5rem;
+    border: unset;
+    outline: none;
+    padding: .5rem 1rem;
+}
+
+.rootStyle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 8rem;
+    background: linear-gradient(180deg, #5D2232 12.51%, rgba(140, 76, 106, 0) 100%);
+}
+
+.logo {
+    font-family: Rochester, cursive;
+    margin-left: 4rem;
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    padding-right: 2rem;
+}
