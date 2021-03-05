@@ -24,3 +24,10 @@
     row-gap: 3rem;
     margin: 15rem 4rem 4rem 4rem;
 }
+
+/* Mobile view */
+@media (max-width: 414px) {
+    .root-style-masterview {
+      margin: 10rem 4rem 4rem 4rem;
+    }
+  }

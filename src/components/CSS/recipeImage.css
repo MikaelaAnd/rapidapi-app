@@ -10,8 +10,9 @@
 }
 
 /* Tablet view */
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .recipeImageContainer {
         margin-right: 0;
+        width: 75%;
     }
 }
