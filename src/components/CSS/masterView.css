@@ -16,3 +16,11 @@
     background-attachment: fixed;
 }
 
+.root-style-masterview {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 3rem;
+    margin: 15rem 4rem 4rem 4rem;
+}
