@@ -52,6 +52,19 @@ class DrinkRecipe extends Component<Props, State> {
             </div>
         );
     }
+
+    screenChanging(event: { matches: any; }) {
+        window.matchMedia('(max-width: 600px)').addEventListener('change', screenTest);
+        MediaQueryList
+        
+        if (event.matches) {
+            <p>this is a small screen</p>
+        } else {
+            <p>this is a BIG screen</p>
+        }
+    
+    
+    }
 }
 
 const rootStyle: CSSProperties = {
