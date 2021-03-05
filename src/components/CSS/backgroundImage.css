@@ -1,5 +1,14 @@
 .background-image {
-    background: url(../../assets/background-image-large.jpg);
+    background: url(../../assets/background-image.jpg); 
+    min-height: 100vh;
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.background-image-white {
+    background: url(../../assets/background-image-white.jpg);
     min-height: 100vh;
     display: flex;
     background-repeat: no-repeat;
