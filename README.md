@@ -3,7 +3,7 @@ RapiDapi is a web app developed with typescript and react where you can search f
 
 Created by me, [Felicia](https://github.com/feliciavonbraun), [Jennifer](https://github.com/JenniferTendell), [Marie](https://github.com/mariewag).
 
-Netlify-link TBC...
+Try out our app [here!](rapidapiapp.netlify.app)
 ## To start the project: 
 1. 
 ## `npm install`
