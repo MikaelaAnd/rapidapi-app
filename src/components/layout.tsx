@@ -47,7 +47,7 @@ class Layout extends Component<Props, State> {
 
    // Decides which input field to display 
    toggleInput() {
-      if (this.state.drinks == []) {
+      if (this.state.drinks === []) {
          this.setState({ showStartPageStyle: true })
       } else {
          this.setState({ showStartPageStyle: false })
