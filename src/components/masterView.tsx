@@ -19,7 +19,7 @@ class MasterView extends Component<Props> {
                             key={index}
                             />     
                     </ErrorBoundary>        
-                    )},
+                    )}
                 </div>
             </div>
         );
