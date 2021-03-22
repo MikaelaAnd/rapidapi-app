@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Suspense } from "react";
+import { Route, Switch, } from "react-router-dom";
 import DrinkRecipe from "./drinkRecipe";
 import { Cocktail } from "./layout";
 import MasterView from "./masterView";
